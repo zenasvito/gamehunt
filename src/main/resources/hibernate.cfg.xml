@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Koneksi database (driver, url, username, password) diatur di applicationContext.xml -->
+
+        <!-- Dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- Pengaturan Debugging (ubah show_sql jadi false jika konsol terlalu ramai) -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <!-- update: tabel dibuat/disesuaikan otomatis dari class model -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Daftarkan class model -->
+        <mapping class="com.mycompany.gamehunt.model.User"/>
+        <mapping class="com.mycompany.gamehunt.model.Product"/>
+        <mapping class="com.mycompany.gamehunt.model.Sale"/>
+        <mapping class="com.mycompany.gamehunt.model.Supplier"/>
+        <mapping class="com.mycompany.gamehunt.model.Purchase"/>
+    </session-factory>
+</hibernate-configuration>

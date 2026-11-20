@@ -1,0 +1,3 @@
+-- Cukup buat database kosong:  CREATE DATABASE gamehunt;
+-- Tabel dibuat otomatis oleh Hibernate (hbm2ddl.auto=update).
+-- Data awal (akun admin/kasir + 3 contoh game + 3 supplier) diisi otomatis oleh util/Seeder.java.
